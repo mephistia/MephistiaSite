@@ -417,10 +417,6 @@ h5 {
     padding-top: 10px;
 }
 
-.commission-info h5:last-of-type {
-    text-align: center;
-}
-
 .commission-info li {
     color: var(--caption-color);
     font-family: 'Nunito', sans-serif;
@@ -450,10 +446,6 @@ table.pricing thead {
 
 table.responsive-table {
     display: none;
-}
-
-.yellow {
-    color: #ffe855;
 }
 
 @media only screen and (max-width: 760px),

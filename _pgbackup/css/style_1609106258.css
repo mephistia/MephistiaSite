@@ -417,10 +417,6 @@ h5 {
     padding-top: 10px;
 }
 
-.commission-info h5:last-of-type {
-    text-align: center;
-}
-
 .commission-info li {
     color: var(--caption-color);
     font-family: 'Nunito', sans-serif;
@@ -448,25 +444,9 @@ table.pricing thead {
     color: var(--bg-color);
 }
 
-table.responsive-table {
-    display: none;
-}
-
-.yellow {
-    color: #ffe855;
-}
-
 @media only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)  {
     table.pricing:not(.responsive-table) {
         display: none;
-    }
-
-    table.responsive-table {
-        display: table;
-    }
-
-    table.responsive-table:not(:first-of-type) {
-        margin-top: -10px;
     }
 }
