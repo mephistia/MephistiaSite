@@ -404,46 +404,6 @@ h5 {
     margin-bottom: 15px;
 }
 
-.commission-info a {
-    color: var(--accent-bright);
-    transition: color .3s ease-in-out;
-}
-
-.commission-info a:hover {
-    color: var(--accent-color);
-}
-
-.commission-info h5 {
-    padding-top: 10px;
-}
-
-.commission-info li {
-    color: var(--caption-color);
-    font-family: 'Nunito', sans-serif;
-    font-size: .9rem;
-    line-height: 1.5rem;
-}
-
-table.pricing {
-    table-layout: fixed;
-    width: 100%;
-    font-size: .9rem;
-    margin: 10px 0;
-    border-collapse: collapse;
-}
-
-table.pricing td,
-table.pricing th {
-    padding: 10px;
-    text-align: center;
-    border: 2px solid var(--accent-color);
-}
-
-table.pricing thead {
-    background-color: var(--accent-color);
-    color: var(--bg-color);
-}
-
-@media only screen and (max-width: 760px),
-(min-device-width: 768px) and (max-device-width: 1024px)  {
+.commission-info strong {
+    font-style: normal;
 }

@@ -156,7 +156,9 @@
 }
 
 .tobii__slide figure {
-    margin: auto;
+    margin: 0;
+    position: relative;
+    display: inline;
 }
 
 .tobii__slide figure>img {
@@ -177,10 +179,9 @@
     color: #192938;
     color: var(--caption-color);
     padding: 1rem 2rem;
+    position: absolute;
     white-space: pre-wrap;
     width: 100%;
-    text-align: center;
-    text-shadow: 2px 2px 1px #000000;
 }
 
 .tobii__slide [data-type=html] video {

@@ -155,10 +155,6 @@
     display: block;
 }
 
-.tobii__slide figure {
-    margin: auto;
-}
-
 .tobii__slide figure>img {
     display: block;
     height: auto;
@@ -179,8 +175,6 @@
     padding: 1rem 2rem;
     white-space: pre-wrap;
     width: 100%;
-    text-align: center;
-    text-shadow: 2px 2px 1px #000000;
 }
 
 .tobii__slide [data-type=html] video {

@@ -155,10 +155,6 @@
     display: block;
 }
 
-.tobii__slide figure {
-    margin: auto;
-}
-
 .tobii__slide figure>img {
     display: block;
     height: auto;

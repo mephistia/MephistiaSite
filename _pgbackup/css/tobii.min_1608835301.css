@@ -5,14 +5,14 @@
     --zoom-icon-background: rgba(25,41,56,0.94);
     --zoom-icon-color: #fff;
     --lightbox-background: rgba(0.8,0.8,0.8,0.8);
-    --caption-background: transparent;
+    --caption-background: rgba(0,0,0,.5);
     --caption-color: #fffcf7;
     --counter-background: transparent;
     --counter-color: #fff;
     --button-background: transparent;
     --button-color: #fff;
     --loader-color: #fff;
-    --slide-max-height: 85vh;
+    --slide-max-height: 90vh;
     --slide-max-width: 85vw;
 }
 
@@ -140,10 +140,10 @@
 }
 
 .tobii__slide [data-type] {
-    /*max-height: 85vh;
+    max-height: 85vh;
     max-height: var(--slide-max-height);
     max-width: 85vw;
-    max-width: var(--slide-max-width);*/
+    max-width: var(--slide-max-width);
     overflow: hidden;
     overflow-y: auto;
     -ms-scroll-chaining: none;
@@ -156,7 +156,8 @@
 }
 
 .tobii__slide figure {
-    margin: auto;
+    margin: 0;
+    position: relative;
 }
 
 .tobii__slide figure>img {
@@ -167,7 +168,6 @@
     max-width: 85vw;
     max-width: var(--slide-max-width);
     width: auto;
-    margin: auto;
 }
 
 .tobii__slide figure>figcaption {
@@ -176,11 +176,10 @@
     bottom: 0;
     color: #192938;
     color: var(--caption-color);
-    padding: 1rem 2rem;
+    padding: .22222em .44444em;
+    position: absolute;
     white-space: pre-wrap;
     width: 100%;
-    text-align: center;
-    text-shadow: 2px 2px 1px #000000;
 }
 
 .tobii__slide [data-type=html] video {
