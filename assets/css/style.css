@@ -166,7 +166,7 @@ a{
     background-color: transparent;
 }
 
-button, .btn-set a{
+section button, .btn-set a{
     background-color: rgba(var(--color-accent), .25);
 	color: inherit;
 	border: none;
@@ -178,7 +178,7 @@ button, .btn-set a{
     transition: background-color .3s, color .3s;
 }
 
-.filters button.active-btn, button:hover, .btn-set a:hover{
+.filters button.active-btn, section button:hover, .btn-set a:hover{
     background: rgb(var(--color-accent-dark));
     color: rgb(var(--color-light));
 }

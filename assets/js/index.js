@@ -38,25 +38,38 @@ export function mobileMenu(){
         let topOffset = window.scrollY;
         if (topOffset <= delta){
             nav.classList.remove('nav-showing');
-            filters.classList.remove('nav-showing');
+            if (filters){
+                filters.classList.remove('nav-showing');
+            }
             return;
-        }            
+        }    
+        
+        if (filters){
+            if (topOffset > lastScrollTop
+                && !filters.classList.contains('nav-hidden') && !filters.classList.contains('notSticky')){
+                    filters.classList.add('nav-hidden');
+                    filters.classList.remove('nav-showing');
+                }
+
+                else {
+                    if (topOffset < lastScrollTop && filters.classList.contains('nav-hidden')){
+                        filters.classList.remove('nav-hidden');
+                        filters.classList.add('nav-showing');
+                    }
+                }
+        }
+        
         if (topOffset > lastScrollTop 
-        && !nav.classList.contains('nav-hidden') && !nav.classList.contains('notSticky')
-        && !filters.classList.contains('nav-hidden') && !filters.classList.contains('notSticky')){
+        && !nav.classList.contains('nav-hidden') && !nav.classList.contains('notSticky')){
             nav.classList.add('nav-hidden');
             nav.classList.remove('nav-showing');
-            filters.classList.add('nav-hidden');
-            filters.classList.remove('nav-showing');
-
+            
         }
         else {
-            if (topOffset < lastScrollTop && nav.classList.contains('nav-hidden') 
-            && filters.classList.contains('nav-hidden')){
+            if (topOffset < lastScrollTop && nav.classList.contains('nav-hidden')){
                 nav.classList.remove('nav-hidden')
                 nav.classList.add('nav-showing');                    
-                filters.classList.remove('nav-hidden')
-                filters.classList.add('nav-showing');
+               
             }
         }
         lastScrollTop = topOffset;
