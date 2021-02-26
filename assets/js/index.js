@@ -116,6 +116,8 @@ imgLoad.on('progress', function(){
     isotope.layout();
 })
 
+const filters = document.querySelector('.filters');
+
 const allBtn = filters.querySelector('button[data-filter="*"]');
 const illustBtn = filters.querySelector('button[data-filter=".illustration"]');
 const webdesignBtn = filters.querySelector('button[data-filter=".web-design"]');
