@@ -1,0 +1,244 @@
+h4{
+    font-size: 1.04rem;
+}
+
+h4.notice{
+    color: rgb(var(--color-accent-dark));
+    width: 100%;
+}
+
+.page-header{
+    width: 100%;
+    border-radius: 5px;
+    padding: 2rem 3rem;
+    background-color: rgb(var(--color-dark));
+    background: linear-gradient(90deg, rgba(65,106,108,0.95) 0%, rgba(65,106,108,0.95) 100%), url("../img/illustration/ArthurAnimals.webp") no-repeat center; 
+    background-size: cover;
+}
+
+.page-header h5{
+    max-width: 70%;
+}
+
+.page{
+    line-height: 2rem;
+}
+
+.page a::before{
+    content: '';
+    display: block;
+    width: 105%;
+    position: absolute;
+    transition: height .3s;
+    background-color: rgb(var(--color-accent));
+    height: 3px;
+    border-radius: 3px;
+    left: -2.5%;
+    bottom: 0;
+    z-index: -1;
+    transition: background-color .3s;
+}
+
+.page a{
+    display: inline-block;
+    z-index: 1;
+    transition: transform .3s;
+}
+
+.page a:hover::before{
+    background-color: rgba(var(--color-accent), .5);
+}
+
+.page a:hover{
+    transform: scale(.95);
+}
+
+.page-content{
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.page-content ul{
+    list-style-type: none;
+}
+
+.page-content li::before{
+    content: "\2726"; 
+    color: rgb(var(--color-accent));
+    display: inline-block;
+    width: 1rem;
+}
+
+.page-content li li::before{
+    content: "\2727"; 
+}
+
+.page-content > div{
+    width: 50%;
+    padding: 1rem;
+}
+
+.page-content.comms > div{
+    width: 100%;
+    text-align: justify;
+}
+
+.page-content h4{
+    margin-bottom: 0;
+}
+
+.btn-set{
+    padding: 0;
+}
+
+.btn-set li::before{
+    content: none;
+}
+
+.btn-set li a{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    transition: background-color .3s, color .3s, transform .3s;
+}
+
+.btn-set li a::before{
+    content: none;
+}
+
+.btn-set svg{
+    fill: rgb(var(--color-text));
+    transition: fill .3s;
+    margin-right: .5rem;
+}
+
+.btn-set a:hover svg{
+    fill: rgb(var(--color-light));
+}
+
+.btn-set li a:hover{
+    color: rgb(var(--color-light));
+}
+
+.page-content > div:last-child{
+    width: 100%;
+}
+
+.comm-types{
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.comm-types > div{
+    width: 50%;
+    margin-bottom: 3rem;
+}
+
+.comm-types figure{
+    max-width: 55%;
+    margin: 0;
+}
+
+.comm-types img{
+    max-width: 100%;
+}
+
+.comm-types li::before{
+    content: none;
+}
+
+.comm-types ul h4, .comm-types ul h6{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.comm-types ul{
+    padding-left: 1rem;
+    margin: 0;
+    line-height: 1.2rem;
+}
+
+.comms > div{
+    padding: 0;
+}
+
+/* laptop */
+@media only screen and (max-width: 1400px){
+    .comm-types > div{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .comm-types > div > div {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 25%;
+    }
+
+    .comm-types li{
+        display: block;
+        width: 100%;
+    }
+
+}
+
+/* tablet */
+@media only screen and (max-width: 1024px){
+    .side-content-wrapper{
+        width: 100%;
+        padding: 0;
+    }
+
+    .page-content{
+        padding: 2rem 5%;
+    }
+
+    .page-header h5{
+        max-width: 100%;
+    }
+}
+
+/* phone */
+@media only screen and (max-width: 760px) {
+    .page-content > div{
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .comm-types > div > div{
+        width: auto;
+    }
+
+    .comm-types > div{
+        justify-content: initial;
+    }
+}
+
+
+/* extras specific */
+@media only screen and (max-width: 430px) {
+
+    .comm-types figure{
+        max-width: 100%;
+    }
+
+    .comm-types > div{
+        flex-wrap: wrap;
+    }
+
+    .comm-types ul{
+        padding: .5rem 0 0 .5rem;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .extras li:nth-last-child(2){
+        transform: translateX(-148%);
+    }
+}
+

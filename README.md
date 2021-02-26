@@ -1,2 +1,0 @@
-# MephistiaSite
- Personal website/portfolio
