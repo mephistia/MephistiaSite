@@ -422,9 +422,6 @@ footer .social-buttons a:hover{
     fill: rgb(var(--color-light));
 }
 
-.nav-hidden{
-    transform: translateY(-210%);
-}
 
 /* laptop */
 @media only screen and (max-width: 1400px){
@@ -439,6 +436,11 @@ footer .social-buttons a:hover{
 
 /* tablet */
 @media only screen and (max-width: 1024px) {
+
+    .nav-hidden{
+        transform: translateY(-210%);
+    }
+    
     .desktop-only{
         display: none;
     }
