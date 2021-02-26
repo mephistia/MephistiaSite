@@ -2,7 +2,10 @@ export function activeLink(){
     const menu = document.querySelector('nav');
     const path = window.location.pathname.split('/').pop();
     if (path.length > 0){
-        menu.querySelector(`a[href="${path}"]`).classList.add('active-link')
+        menu.querySelector(`a[href="${path}"]`).classList.add('active-link');
+    }
+    else {
+        menu.querySelector(`a[href="/]`).classList.add('active-link');
     }
 }
 
