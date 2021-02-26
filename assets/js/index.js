@@ -1,12 +1,12 @@
 export function activeLink(){
     const menu = document.querySelector('nav');
     const path = window.location.pathname.split('/').pop();
+    console.log(path);
     menu.querySelector(`.home-link`).classList.add('active-link');
 
     if (path.length > 0){
         menu.querySelector(`a[href="${path}"]`).classList.add('active-link');
         menu.querySelector(`.home-link`).classList.remove('active-link');
-
     }
 }
 
