@@ -5,7 +5,7 @@ export function activeLink(){
     menu.querySelector(`.home-link`).classList.add('active-link');
 
     if (path.length > 0){
-        menu.querySelector(`a[href="${path}"]`).classList.add('active-link');
+        menu.querySelector(`a[href="/${path}"]`).classList.add('active-link');
         menu.querySelector(`.home-link`).classList.remove('active-link');
     }
 }
@@ -20,7 +20,9 @@ export function mobileMenu(){
     );
 
     obs.observe(nav);
-    obs.observe(filters);
+    if (filters){
+        obs.observe(filters);
+    }
 
 
     // mudar no scroll
