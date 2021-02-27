@@ -377,7 +377,7 @@ footer .social-buttons a:hover{
 
 .diagonal{
     position: absolute;
-    top: -85px;
+    top: -83px;
     left: 0;
     right: 0;
     width: 0;
@@ -389,6 +389,7 @@ footer .social-buttons a:hover{
 
 .main-wrap .diagonal{
     border-color: transparent transparent rgb(var(--color-light)) transparent;
+
 }
 
 .to-top-wrapper{
