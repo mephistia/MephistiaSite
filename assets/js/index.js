@@ -15,11 +15,16 @@ export function mobileMenu(){
     const filters = document.querySelector('.filters');
 
     const obs = new IntersectionObserver(
-        ([e]) => e.target.classList.toggle('notSticky'),
+        (e) => {
+            e.forEach(entry => {
+                entry.target.classList.toggle('notSticky');
+            })
+        },
         {rootMargin: '-26px 0px 500px 0px', threshold: .75}
     );
 
     obs.observe(nav);
+
     if (filters){
         obs.observe(filters);
     }
