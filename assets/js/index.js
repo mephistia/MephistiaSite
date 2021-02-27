@@ -51,7 +51,7 @@ export function mobileMenu(){
         
         if (filters){
             if (topOffset > lastScrollTop
-                && !filters.classList.contains('nav-hidden') && !filters.classList.contains('notSticky')){
+                && !filters.classList.contains('nav-hidden')){
                     filters.classList.add('nav-hidden');
                     filters.classList.remove('nav-showing');
                 }
