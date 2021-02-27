@@ -12,7 +12,7 @@ export function activeLink(){
 
 export function mobileMenu(){
     const nav = document.querySelector('.sidebar');
-    const filters = document.querySelector('.filters');
+    let filters = document.querySelector('.filters');
 
     const obs = new IntersectionObserver(
         (e) => {
@@ -26,9 +26,12 @@ export function mobileMenu(){
     obs.observe(nav);
 
     if (filters){
-        obs.observe(filters);
-    }
+        // obs.observe(filters);
 
+        const mq = window.matchMedia("(max-width: 1024px)");
+        filtersToHeader(mq);
+        mq.addEventListener(filtersToHeader);
+    }
 
     // mudar no scroll
     let didScroll;
@@ -43,27 +46,26 @@ export function mobileMenu(){
         let topOffset = window.scrollY;
         if (topOffset <= delta){
             nav.classList.remove('nav-showing');
-            if (filters){
-                filters.classList.remove('nav-showing');
-            }
+            // if (filters){
+            //     filters.classList.remove('nav-showing');
+            // }
             return;
         }    
         
-        if (filters){
-            if (topOffset > lastScrollTop
-                && filters.offsetTop < -1
-                && !filters.classList.contains('nav-hidden')){
-                    filters.classList.add('nav-hidden');
-                    filters.classList.remove('nav-showing');
-                }
+        // if (filters){
+        //     if (topOffset > lastScrollTop
+        //         && !filters.classList.contains('nav-hidden')){
+        //             filters.classList.add('nav-hidden');
+        //             filters.classList.remove('nav-showing');
+        //         }
 
-                else {
-                    if (topOffset < lastScrollTop && filters.classList.contains('nav-hidden')){
-                        filters.classList.remove('nav-hidden');
-                        filters.classList.add('nav-showing');
-                    }
-                }
-        }
+        //         else {
+        //             if (topOffset < lastScrollTop && filters.classList.contains('nav-hidden')){
+        //                 filters.classList.remove('nav-hidden');
+        //                 filters.classList.add('nav-showing');
+        //             }
+        //         }
+        // }
         
         if (topOffset > lastScrollTop 
         && !nav.classList.contains('nav-hidden') && !nav.classList.contains('notSticky')){
@@ -91,6 +93,20 @@ export function mobileMenu(){
 }
 
 
+function filtersToHeader(el){
+    const menu = document.querySelector('.sidebar');
+    const filterElem = document.querySelector('.filters');
+    const page = document.querySelector('.side-content-wrapper');
+
+    if (el.matches){
+        menu.append(filterElem.cloneNode(true));
+        filterElem.remove();
+    }
+    else {
+        page.insertAdjacentElement('afterbegin', filterElem.cloneNode(true));
+        filterElem.remove();
+    }
+}
 
 AOS.init({
     delay: 50,
