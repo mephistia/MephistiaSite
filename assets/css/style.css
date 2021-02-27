@@ -193,8 +193,8 @@ a{
     position: sticky;
     top: 1rem;
     z-index: 1;
-    transform: translateY(-1rem);
-    width: 101%; /* 1% not covering */
+    transform: translateY(-1rem) translateX(-1%);
+    width: 102%; /* 1% not covering */
     transition: transform .3s;
 }
 
