@@ -18,7 +18,7 @@ export function mobileMenu(){
         ([e]) => {
             e.target.classList.toggle('notSticky');
         },
-        {rootMargin: '-26px 0px 500px 0px', threshold: .75}
+        {rootMargin: '-56px 0px 500px 0px', threshold: .75}
     );
 
     obs.observe(nav);
@@ -39,6 +39,8 @@ export function mobileMenu(){
 
     function hasScrolled(){
         let topOffset = window.scrollY;
+        console.log(`from nav to top: ${nav.offsetY}`);
+
         if (topOffset <= delta){
             nav.classList.remove('nav-showing');
             // if (filters){
@@ -46,7 +48,23 @@ export function mobileMenu(){
             // }
             return;
         }    
-        
+
+                
+        if (topOffset > lastScrollTop 
+            && !nav.classList.contains('nav-hidden') && !nav.classList.contains('notSticky')){
+                nav.classList.add('nav-hidden');
+                nav.classList.remove('nav-showing');
+                console.log('hidden nav');
+            }
+        else {
+            console.log('showing nav?');
+            if (topOffset < lastScrollTop && nav.classList.contains('nav-hidden')){
+                nav.classList.remove('nav-hidden')
+                nav.classList.add('nav-showing');                    
+                
+            }
+        }
+    
         // if (filters){
         //     if (topOffset > lastScrollTop
         //         && !filters.classList.contains('nav-hidden')){
@@ -61,21 +79,7 @@ export function mobileMenu(){
         //             }
         //         }
         // }
-        
-        if (topOffset > lastScrollTop 
-        && !nav.classList.contains('nav-hidden') && !nav.classList.contains('notSticky')){
-            nav.classList.add('nav-hidden');
-            nav.classList.remove('nav-showing');
-            console.log('hidden nav');
-        }
-        else {
-            console.log('showing nav?');
-            if (topOffset < lastScrollTop && nav.classList.contains('nav-hidden')){
-                nav.classList.remove('nav-hidden')
-                nav.classList.add('nav-showing');                    
-               
-            }
-        }
+
         lastScrollTop = topOffset;
     }
 
