@@ -51,6 +51,7 @@ export function mobileMenu(){
         
         if (filters){
             if (topOffset > lastScrollTop
+                && filters.offsetTop < -1
                 && !filters.classList.contains('nav-hidden')){
                     filters.classList.add('nav-hidden');
                     filters.classList.remove('nav-showing');
