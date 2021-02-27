@@ -162,7 +162,7 @@ a{
 }
 
 
-.sidebar.notSticky{
+.sidebar.notSticky.nav-showing nav, .sidebar.notSticky nav{
     background-color: transparent;
 }
 
@@ -438,13 +438,13 @@ footer .social-buttons a:hover{
 @media only screen and (max-width: 1024px) {
 
     .nav-hidden{
-        transform: translateY(-210%);
+        transform: translateY(-100%);
     }
     .desktop-only{
         display: none;
     }
 
-    .sidebar.nav-showing{
+    .sidebar.nav-showing nav{
         background-color: rgb(var(--color-dark));
         color: rgb(var(--color-light));
     }
@@ -455,7 +455,7 @@ footer .social-buttons a:hover{
         z-index: 1;
     }
 
-    .sidebar.notSticky{
+    .sidebar.notSticky nav, .sidebar.nav-showing.notSticky nav{
         color: rgb(var(--color-text));
         margin-top: -1rem;
         padding-bottom: 1rem;
@@ -498,13 +498,8 @@ footer .social-buttons a:hover{
 @media only screen and (max-width: 760px) {
 
     .filters{
-        transform: translateY(-1rem) translateX(-2.5%);
+        transform: translateX(-2.5%);
         width: 105%;
-    }
-
-        
-    .filters.nav-hidden{
-        transform: translateY(-210%) translateX(-2.5%);
     }
 
 
