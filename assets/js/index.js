@@ -26,8 +26,6 @@ export function mobileMenu(){
     obs.observe(nav);
 
     if (filters){
-        // obs.observe(filters);
-
         filtersToHeader();
         window.addEventListener('resize', filtersToHeader);
     }
@@ -70,9 +68,10 @@ export function mobileMenu(){
         && !nav.classList.contains('nav-hidden') && !nav.classList.contains('notSticky')){
             nav.classList.add('nav-hidden');
             nav.classList.remove('nav-showing');
-            
+            console.log('hidden nav');
         }
         else {
+            console.log('showing nav?');
             if (topOffset < lastScrollTop && nav.classList.contains('nav-hidden')){
                 nav.classList.remove('nav-hidden')
                 nav.classList.add('nav-showing');                    
