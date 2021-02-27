@@ -18,7 +18,7 @@ export function mobileMenu(){
         ([e]) => {
             e.target.classList.toggle('notSticky');
         },
-        {rootMargin: '-56px 0px 500px 0px', threshold: .75}
+        {rootMargin: '-45px 0px 500px 0px', threshold: .75}
     );
 
     obs.observe(nav);
