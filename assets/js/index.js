@@ -1,7 +1,6 @@
 export function activeLink(){
     const menu = document.querySelector('nav');
     const path = window.location.pathname.split('/').pop();
-    console.log(path);
     menu.querySelector(`.home-link`).classList.add('active-link');
 
     if (path.length > 0){
@@ -39,8 +38,6 @@ export function mobileMenu(){
 
     function hasScrolled(){
         let topOffset = window.scrollY;
-        console.log(`from nav to top: ${nav.offsetY}`);
-
         if (topOffset <= delta){
             nav.classList.remove('nav-showing');
             // if (filters){
@@ -54,10 +51,8 @@ export function mobileMenu(){
             && !nav.classList.contains('nav-hidden') && !nav.classList.contains('notSticky')){
                 nav.classList.add('nav-hidden');
                 nav.classList.remove('nav-showing');
-                console.log('hidden nav');
             }
         else {
-            console.log('showing nav?');
             if (topOffset < lastScrollTop && nav.classList.contains('nav-hidden')){
                 nav.classList.remove('nav-hidden')
                 nav.classList.add('nav-showing');                    
