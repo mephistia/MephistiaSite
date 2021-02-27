@@ -440,7 +440,7 @@ footer .social-buttons a:hover{
     .nav-hidden{
         transform: translateY(-210%);
     }
-    
+
     .desktop-only{
         display: none;
     }
@@ -483,8 +483,12 @@ footer .social-buttons a:hover{
     }
 
     .filters{
-        top: 5.5rem;
+        top: 0;
         justify-content: space-around;
+    }
+
+    .filters.nav-showing{
+        margin-top: 5.5rem;
     }
 
     .filters li:not(:last-child){
