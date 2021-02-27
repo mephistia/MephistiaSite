@@ -166,7 +166,7 @@ a{
     background-color: transparent;
 }
 
-section button, .btn-set a{
+.filters button, section button, .btn-set a{
     background-color: rgba(var(--color-accent), .25);
 	color: inherit;
 	border: none;
@@ -178,7 +178,7 @@ section button, .btn-set a{
     transition: background-color .3s, color .3s;
 }
 
-.filters button.active-btn, section button:hover, .btn-set a:hover{
+.filters button.active-btn, section button:hover, .filters button:hover, .btn-set a:hover{
     background: rgb(var(--color-accent-dark));
     color: rgb(var(--color-light));
 }
@@ -457,7 +457,6 @@ footer .social-buttons a:hover{
 
     .sidebar.notSticky{
         color: rgb(var(--color-text));
-        background-color: transparent;
         margin-top: -1rem;
         padding-bottom: 1rem;
     }

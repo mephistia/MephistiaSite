@@ -15,10 +15,8 @@ export function mobileMenu(){
     let filters = document.querySelector('.filters');
 
     const obs = new IntersectionObserver(
-        (e) => {
-            e.forEach(entry => {
-                entry.target.classList.toggle('notSticky');
-            })
+        ([e]) => {
+            e.target.classList.toggle('notSticky');
         },
         {rootMargin: '-26px 0px 500px 0px', threshold: .75}
     );
