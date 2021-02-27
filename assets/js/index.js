@@ -28,9 +28,8 @@ export function mobileMenu(){
     if (filters){
         // obs.observe(filters);
 
-        const mq = window.matchMedia("(max-width: 1024px)");
-        filtersToHeader(mq);
-        mq.addEventListener(filtersToHeader);
+        filtersToHeader();
+        window.addEventListener('resize', filtersToHeader);
     }
 
     // mudar no scroll
@@ -93,12 +92,13 @@ export function mobileMenu(){
 }
 
 
-function filtersToHeader(el){
+function filtersToHeader(){
     const menu = document.querySelector('.sidebar');
     const filterElem = document.querySelector('.filters');
     const page = document.querySelector('.side-content-wrapper');
+    const mq = window.matchMedia("(max-width: 1024px)");
 
-    if (el.matches){
+    if (mq.matches){
         menu.append(filterElem.cloneNode(true));
         filterElem.remove();
     }
