@@ -76,8 +76,33 @@ h2{
     justify-content: center;
 }
 
-.link a, .notice{
-    text-shadow: 0 0 4px #DCC099, 0 0 4px #DCC099, 0 0 4px #DCC099, 0 0 4px #DCC099, 0 0 4px #DCC099, 0 0 4px #DCC099, 0 0 4px #DCC099, 0 0 4px #DCC099, 0 0 4px #DCC099;
+.link a, .notice, foreignObject div{
+    text-shadow: 
+    0 0 4px #DCC099, 
+    0 0 4px #DCC099, 
+    0 0 4px #DCC099, 
+    0 0 4px #DCC099,
+    0 0 4px #DCC099,
+    0 0 4px #DCC099,
+    0 0 4px #DCC099, 
+    0 0 4px #DCC099, 
+    0 0 4px #DCC099, 
+    0 0 4px #DCC099, 
+    0 0 4px #DCC099, 
+    0 0 4px #DCC099,
+    0 0 4px #DCC099,
+    0 0 4px #DCC099,
+    0 0 4px #DCC099, 
+    0 0 4px #DCC099, 
+    0 0 4px #DCC099, 
+    0 0 4px #DCC099, 
+    0 0 4px #DCC099, 
+    0 0 4px #DCC099,
+    0 0 4px #DCC099,
+    0 0 4px #DCC099,
+    0 0 4px #DCC099, 
+    0 0 4px #DCC099, 
+    0 0 4px #DCC099;
 }
 
 .link p::after{
@@ -130,6 +155,10 @@ svg{
     margin: auto;
 }
 
+svg.phone-only{    
+    height: 250px;
+}
+
 .phone-only{
     display: none;
 }
@@ -148,7 +177,8 @@ svg{
     }
 
     h2{
-        font-size: 2.5rem;
+        font-size: 3.3rem;
+        margin-top: 5rem;
     }
 
     .notice{
@@ -172,13 +202,13 @@ svg{
     }
 
     .svg-wrapper{
-        width: 2rem;
-        height: 2rem;
+        width: 5rem;
+        height: 5rem;
     }
 
     .svg-wrapper svg{
-        width: 1.5rem;
-        height: 1.5rem;
-        margin-top: 3px;
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-top: 9px;
     }
 }
