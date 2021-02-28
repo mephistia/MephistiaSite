@@ -60,9 +60,12 @@
         let wrap1 = d3.textwrap().bounds({height: myHeight, width: myWidth});
         d3.selectAll('text').call(wrap1);
 
-        const newBounds = document.query('foreignObject');
-        newBounds.setAttribute('width', myWidth);
-        newBounds.setAttribute('height', myHeight);
+        const newBounds = document.querySelectorAll('foreignObject');
+        for (let e of newBounds){
+            e.setAttribute('width', myWidth);
+            e.setAttribute('height', myHeight);
+        }
+
     </script>
 </body>
 </html>
