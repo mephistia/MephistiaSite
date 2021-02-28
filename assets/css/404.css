@@ -10,6 +10,7 @@ body {
     font-family: 'Roboto Slab', sans-serif;
     color: #443C30;
     -webkit-text-stroke: 5px #DCC099;
+    -webkit-text-fill: #443C30;
     paint-order: stroke fill;
 }
 
