@@ -6,11 +6,12 @@ html,
 body {
     margin: 0;
     padding: 0;
+}
+
+body{
     background-color: #DCC099;
     font-family: 'Roboto Slab', sans-serif;
     color: #443C30;
-    -webkit-text-stroke: 5px #DCC099;
-    -webkit-text-fill-color: #443C30;
     paint-order: stroke fill;
 }
 
@@ -47,15 +48,18 @@ img{
 
 h1{
     font-size: 3.5rem;
-    margin-top: 0;
-    -webkit-text-stroke: 12px #DCC099;
     text-transform: uppercase;
     letter-spacing: .8rem;
+    height: 6rem;
+}
+
+h1, h2, .link a{
+    margin: 0;
 }
 
 h2{
     font-size: 2rem;
-    -webkit-text-stroke: 10px #DCC099;
+    width: 100%;
 }
 
 .link{
@@ -64,12 +68,15 @@ h2{
 
 .link a{
     text-transform: uppercase;
-    -webkit-text-stroke: 10px #DCC099;
     font-size: 1.8rem;
     margin-top: .5rem;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.link a, .notice{
+    text-shadow: 0 0 4px #DCC099, 0 0 4px #DCC099, 0 0 4px #DCC099, 0 0 4px #DCC099, 0 0 4px #DCC099, 0 0 4px #DCC099, 0 0 4px #DCC099, 0 0 4px #DCC099, 0 0 4px #DCC099;
 }
 
 .link p::after{
@@ -110,7 +117,49 @@ h2{
     margin-right: 1rem;
 }
 
+text{
+    stroke: #DCC099;
+    stroke-width: 12px;
+    fill: #443C30;
+    text-anchor: middle;
+}
+
+svg{
+    display: block;
+    margin: auto;
+}
+
+.phone-only{
+    display: none;
+}
+
+@media only screen and (max-width: 1340px){
+    h2 text{
+        white-space: pre-line;
+        transform: translateY(-50%);
+    }
+}
+
 @media only screen and (max-width: 860px) and (max-height: 900px){
+
+    body, h1, h2, .link a{
+        -webkit-text-stroke: none;
+
+    }
+
+    h1 text{
+        white-space: pre-line;
+        transform: translateY(-50%);
+    }
+
+    h2 text.phone-only{
+        display: block;
+    }
+
+    .desktop-only{
+        display: none;
+    }
+
     h1{
         font-size: 1.6rem;
     }
