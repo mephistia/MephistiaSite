@@ -55,6 +55,7 @@ h1{
 
 h1, h2, .link a{
     margin: 0;
+    width: 100%;
 }
 
 h2{
@@ -140,11 +141,15 @@ svg{
     }
 }
 
-@media only screen and (max-width: 860px) and (max-height: 900px){
+/* tablet pequeno */
+@media only screen and (max-height: 900px){
+
+}
+
+@media only screen and (max-width: 860px){
 
     body, h1, h2, .link a{
         -webkit-text-stroke: none;
-
     }
 
     h1 text{
@@ -190,5 +195,13 @@ svg{
         height: 1.5rem;
         margin-top: 3px;
     }
+}
 
+/* phone */
+
+@media only screen and (max-width: 860px) {
+    h1 text{
+        white-space: pre-line;
+        transform: translateY(-55%);
+    }
 }
