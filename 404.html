@@ -28,7 +28,9 @@
                         <tspan>Sorry, pardner! Looks like the page you </tspan>
                         <tspan>was tryin' to reach ain’t 'round these parts.</tspan>
                     </text>
-                    <text class="phone-only" x="50%" y="50%">
+                </svg>
+                <svg class="phone-only" xmlns="http://www.w3.org/2000/svg" width="100%">
+                    <text x="50%" y="50%">
                         Sorry, pardner! Looks like the page you was tryin' to reach ain’t 'round these parts.
                     </text>
                 </svg>
@@ -53,8 +55,14 @@
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="assets/js/textwrap.js"></script>
     <script>
-        let wrap1 = d3.textwrap().bounds({height: 300, width: window.innerWidth - 50});
-        d3.selectAll('.phone-only').call(wrap1);
+        const myWidth = window.innerWidth - 50;
+        const myHeight = 300;
+        let wrap1 = d3.textwrap().bounds({height: myHeight, width: myWidth});
+        d3.selectAll('.phone-only text').call(wrap1);
+
+        const newBounds = document.query('foreignObject');
+        newBounds.setAttribute('width', myWidth);
+        newBounds.setAttribute('height', myHeight);
     </script>
 </body>
 </html>

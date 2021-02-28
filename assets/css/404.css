@@ -135,7 +135,7 @@ svg{
 }
 
 @media only screen and (max-width: 980px){
-    h2 text.phone-only{
+    .phone-only{
         display: block;
     }
 
