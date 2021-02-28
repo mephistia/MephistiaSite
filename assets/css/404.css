@@ -141,12 +141,14 @@ svg{
     }
 }
 
-/* tablet pequeno */
-@media only screen and (max-height: 900px){
 
+@media only screen and (max-height: 1024px){
+    h1{
+        font-size: 3rem;
+    }
 }
 
-@media only screen and (max-width: 860px){
+@media only screen and (max-width: 780px){
 
     body, h1, h2, .link a{
         -webkit-text-stroke: none;
@@ -166,11 +168,19 @@ svg{
     }
 
     h1{
-        font-size: 1.6rem;
+        font-size: 4rem;
     }
 
     h2{
-        font-size: 1.1rem;
+        font-size: 2.5rem;
+    }
+
+    .notice{
+        font-size: 1.7rem;
+    }
+
+    .link a{
+        font-size: 2.8rem;
     }
 
     img{
@@ -197,11 +207,4 @@ svg{
     }
 }
 
-/* phone */
 
-@media only screen and (max-width: 860px) {
-    h1 text{
-        white-space: pre-line;
-        transform: translateY(-55%);
-    }
-}
