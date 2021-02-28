@@ -134,7 +134,7 @@ svg{
     display: none;
 }
 
-@media only screen and (max-width: 1340px){
+/* @media only screen and (max-width: 1340px){
     h2 text{
         white-space: pre-line;
         transform: translateY(-50%);
@@ -149,16 +149,6 @@ svg{
 }
 
 @media only screen and (max-width: 980px){
-
-    body, h1, h2, .link a{
-        -webkit-text-stroke: none;
-    }
-
-    h1 text{
-        white-space: pre-line;
-        transform: translateY(-50%);
-    }
-
     h2 text.phone-only{
         display: block;
     }
@@ -207,4 +197,15 @@ svg{
     }
 }
 
+ */
 
+
+ @media only screen and (max-width: 980px){
+    h2 text.phone-only{
+        display: block;
+    }
+
+    .desktop-only{
+        display: none;
+    }
+ }

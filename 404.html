@@ -29,9 +29,7 @@
                         <tspan>was tryin' to reach ain’t 'round these parts.</tspan>
                     </text>
                     <text class="phone-only" x="50%" y="50%">
-                        <tspan>Sorry, pardner! Looks like the page </tspan>
-                        <tspan>you was tryin' to reach ain’t 'round </tspan>
-                        <tspan>these parts.</tspan>
+                        Sorry, pardner! Looks like the page you was tryin' to reach ain’t 'round these parts.
                     </text>
                 </svg>
             </h2>
@@ -52,12 +50,11 @@
         </div>
     </div>
     
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="assets/js/textwrap.js"></script>
     <script>
-        const textToBreak = document.querySelector('h2 text')
-        const mq = window.matchMedia('(max-width: 1024px)');
-        if (mq.matches){
-            textToBreak.setAttribute('xml:space', 'preserve');
-        }
+       let wrap1 = d3.textwrap().bounds({height: 150, width: 450});
+        d3.selectAll('.phone-only').call(wrap1);
     </script>
 </body>
 </html>
