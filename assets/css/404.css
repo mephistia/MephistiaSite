@@ -156,12 +156,12 @@ svg{
     margin: auto;
 }
 
-svg.phone-only{    
-    height: 250px;
-}
-
 .phone-only{
     display: none;
+}
+
+svg.phone-only{
+    height: 100px;
 }
 
 @media only screen and (max-width: 980px){
@@ -174,34 +174,37 @@ svg.phone-only{
     }
 
     h1{
-        font-size: 4rem;
+        font-size: 2rem;
     }
 
     h2{
-        font-size: 3.3rem;
-        margin-top: 5rem;
+        font-size: 1.3rem;
+        margin-top: 1rem;
     }
 
     .notice{
-        font-size: 1.7rem;
+        font-size: .7rem;
     }
 
     .link a{
         font-size: 2.8rem;
     }
 
+    img{
+        max-height: 230px;
+    }
+
     .link a{
-        font-size: 3.2rem;
+        font-size: 1.2rem;
     }
 
     .svg-wrapper{
-        width: 5rem;
-        height: 5rem;
+        width: 3rem;
+        height: 3rem;
     }
 
     .svg-wrapper svg{
-        width: 3.5rem;
-        height: 3.5rem;
-        margin-top: 9px;
+        width: 2rem;
+        height: 2rem;
     }
 }

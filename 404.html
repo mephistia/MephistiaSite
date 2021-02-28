@@ -58,7 +58,7 @@
         const myWidth = window.innerWidth - 50;
         const myHeight = 300;
         let wrap1 = d3.textwrap().bounds({height: myHeight, width: myWidth});
-        d3.selectAll('.phone-only text').call(wrap1);
+        d3.selectAll('text').call(wrap1);
 
         const newBounds = document.query('foreignObject');
         newBounds.setAttribute('width', myWidth);
