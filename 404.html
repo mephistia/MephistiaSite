@@ -16,7 +16,7 @@
     <div class="map-bg">
             <img src="assets/img/404.webp" alt="Question mark">
             <h1>
-                <svg xmlns="http://www.w3.org/2000/svg" width="100%">
+                <svg class="spacing" xmlns="http://www.w3.org/2000/svg" width="100%">
                     <text x="50%" y="50%">
                         Forgotten Valley
                     </text>
@@ -57,15 +57,21 @@
     <script>
         const myWidth = window.innerWidth - 50;
         const myHeight = 300;
-        let wrap1 = d3.textwrap().bounds({height: myHeight, width: myWidth});
-        d3.selectAll('text').call(wrap1);
 
-        const newBounds = document.querySelectorAll('foreignObject');
-        for (let e of newBounds){
-            e.setAttribute('width', myWidth);
-            e.setAttribute('height', myHeight);
+        const mq = window.matchMedia("(max-width: 1024px)");
+
+        if (mq.matches){
+            let wrap1 = d3.textwrap().bounds({height: myHeight, width: myWidth});
+            d3.selectAll('text').call(wrap1);
+
+            const newBounds = document.querySelectorAll('foreignObject');
+            for (let e of newBounds){
+                e.setAttribute('width', myWidth);
+                e.setAttribute('height', myHeight);
+            }
+
         }
-
+       
     </script>
 </body>
 </html>

@@ -50,7 +50,6 @@ img{
 h1{
     font-size: 3.5rem;
     text-transform: uppercase;
-    letter-spacing: .8rem;
     height: 6rem;
 }
 
@@ -164,7 +163,11 @@ svg.phone-only{
     height: 100px;
 }
 
-@media only screen and (max-width: 980px){
+.spacing div, .spacing{
+    letter-spacing: .8rem;
+}
+
+@media only screen and (max-width: 1024px){
     .phone-only{
         display: block;
     }
