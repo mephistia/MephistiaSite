@@ -32,7 +32,7 @@ a{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 2rem;
+    padding: 25px;
     text-align: center;
 }
 
@@ -134,20 +134,6 @@ svg{
     display: none;
 }
 
-/* @media only screen and (max-width: 1340px){
-    h2 text{
-        white-space: pre-line;
-        transform: translateY(-50%);
-    }
-}
-
-
-@media only screen and (max-height: 1024px){
-    h1{
-        font-size: 3rem;
-    }
-}
-
 @media only screen and (max-width: 980px){
     h2 text.phone-only{
         display: block;
@@ -196,16 +182,3 @@ svg{
         margin-top: 3px;
     }
 }
-
- */
-
-
- @media only screen and (max-width: 980px){
-    h2 text.phone-only{
-        display: block;
-    }
-
-    .desktop-only{
-        display: none;
-    }
- }

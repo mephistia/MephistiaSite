@@ -53,7 +53,9 @@
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="assets/js/textwrap.js"></script>
     <script>
-       let wrap1 = d3.textwrap().bounds({height: 150, width: 450});
+        const boundHeight = 300;
+        const boundWidth = window.innerWidth - 50;
+        let wrap1 = d3.textwrap().bounds({height: boundHeight, width: boundWidth});
         d3.selectAll('.phone-only').call(wrap1);
     </script>
 </body>
