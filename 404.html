@@ -52,5 +52,12 @@
         </div>
     </div>
     
+    <script>
+        const textToBreak = document.querySelector('h2 text')
+        const mq = window.matchMedia('(max-width: 1024px)');
+        if (mq.matches){
+            textToBreak.setAttribute('xml:space', 'preserve');
+        }
+    </script>
 </body>
 </html>

@@ -148,7 +148,7 @@ svg{
     }
 }
 
-@media only screen and (max-width: 780px){
+@media only screen and (max-width: 980px){
 
     body, h1, h2, .link a{
         -webkit-text-stroke: none;
